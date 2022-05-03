@@ -1,17 +1,32 @@
-import logo from './logo.svg';
-import './App.css'; 
-import Expense from './component/Expense';
+import Expenses from "./component/Expenses";
+
 function App() {
-  const expenses=[
-    {title:"Car Insurance",amount:200,date:new Date(2022,4,2)},
-    {title:"Bike Insurance",amount:100,date:new Date(2022,3,5)},
-    {title:"Life Insurance",amount:300,date:new Date(2022,2,2)}
+  const expenses = [
+    {
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
   ];
+
   return (
-    <div className="App">
-    <Expense expenses={expenses}/>
+    <div>
+      <Expenses items={expenses} />
     </div>
   );
 }
-
 export default App;
